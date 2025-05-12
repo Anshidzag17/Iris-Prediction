@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>iris app</title>
+    </head>
+    <body>
+        <h1>iris flower species prediction</h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            Sepal_Length
+            <input type="number" name="Sepal_Length"><br><br>
+            Sepal_Width
+            <input type="number" name="Sepal_Width"><br><br>
+            Petal_Length
+            <input type="number" name="Petal_Length"><br><br>
+            Petal_Width
+            <input type="number" name="Petal_Width"><br><br>
+            <button type="submit">predict</button>
+        </form>
+        <p>{{ prediction_text }}</p>
+    </body>
+</html>
